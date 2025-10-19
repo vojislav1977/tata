@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Svetozar "Braca" Pavlović — U spomen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf8f4;
+      --card:#fff;
+      --accent:#8b6b4a;
+      --muted:#6b6b6b;
+      --shadow: 0 6px 24px rgba(32,24,16,0.08);
+      --maxw:900px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:32px;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#f6f2ee);color:#231f20;display:flex;align-items:flex-start;justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--maxw)}
+    header{display:flex;gap:20px;align-items:center;margin-bottom:22px}
+    .portrait{width:140px;height:140px;border-radius:12px;overflow:hidden;flex:0 0 140px;box-shadow:var(--shadow);background:linear-gradient(135deg,#efe7dd,#e8dfd5);display:flex;align-items:center;justify-content:center}
+    .portrait img{width:100%;height:100%;object-fit:cover}
+    .title h1{font-family:'Playfair Display',serif;margin:0;font-size:28px}
+    .title p{margin:6px 0 0;color:var(--muted)}
+
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:18px}
+
+    .intro{font-size:16px;line-height:1.55;color:#2f2a27}
+
+    .meta{display:flex;gap:14px;margin-top:10px;color:var(--muted);font-size:14px}
+
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .thumb{position:relative;overflow:hidden;border-radius:10px;height:110px;background:#eee;cursor:pointer}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1);transition:transform .35s}
+    .thumb:hover img{transform:scale(1.06)}
+
+    .center{display:grid;place-items:center}
+
+    .quote{font-family:'Playfair Display',serif;font-size:18px;margin:0;color:var(--accent)}
+
+    footer{margin-top:14px;color:var(--muted);font-size:13px}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(12,10,8,0.6);z-index:120}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92%;max-height:86%;border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+    .lb-close{position:fixed;top:26px;right:26px;background:#fff;border-radius:999px;padding:8px 10px;font-weight:600;cursor:pointer}
+
+    /* Candle */
+    .candle-wrap{display:flex;gap:14px;align-items:center}
+    .candle{width:30px;height:80px;background:linear-gradient(180deg,#fff,#f2eae0);border-radius:6px;position:relative;box-shadow:inset 0 -6px 8px rgba(0,0,0,0.03)}
+    .flame{position:absolute;left:50%;transform:translateX(-50%);top:-12px;width:12px;height:20px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background: radial-gradient(circle at 40% 30%,#ffd48a 0%,#ffb84a 30%,#ff8b1a 60%, rgba(255,140,26,0) 65%);filter:blur(.2px);animation:flicker 1.6s infinite}
+    @keyframes flicker{0%{transform:translateX(-50%) scale(1)}20%{transform:translateX(-48%) scale(1.03)}50%{transform:translateX(-51%) scale(.98)}70%{transform:translateX(-49%) scale(1.02)}100%{transform:translateX(-50%) scale(1)}}
+
+    /* Responsive */
+    @media (max-width:700px){
+      .portrait{width:96px;height:96px;flex:0 0 96px}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      body{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="portrait card">
+        <!-- Replace the placeholder image by dropping a photo named "portrait.jpg" into the same folder -->
+        <img src="portrait.jpg" alt="Svetozar \"Braca\" Pavlović" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'20\' fill=\'%238b6b4a\'>Dodajte fotografiju</text></svg>'" />
+      </div>
+      <div class="title">
+        <h1>Svetozar "Braca" Pavlović</h1>
+        <p class="meta">1950 &ndash; 2025</p>
+        <div style="margin-top:10px"><span class="quote">Na ovom memorijalnom sajtu odajemo počast životu moga oca, voljenog supruga i najdražeg brata.</span></div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="intro">
+        <p>Na ovom memorijalnom sajtu odajemo počast životu moga oca, voljenog supruga i najdražeg brata. Istražite galeriju fotografija koja prikazuje dragocene uspomene, svaka slika odražava ljubav i radost koju je uneo u naše živote. Pridružite nam se u slavlju njegovog nasleđa i trenutaka koji će zauvek imati posebno mesto u našim srcima.</p>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;flex-wrap:wrap">
+        <div class="candle-wrap" title="Sećanje">
+          <div class="candle"><div class="flame"></div></div>
+          <div style="font-size:13px;color:var(--muted)">U sećanje i sa ljubavlju</div>
+        </div>
+        <div style="font-size:13px;color:var(--muted)">Ažurirano: <strong>2025</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3 style="margin-top:0;margin-bottom:10px">Galerija uspomena</h3>
+      <div class="gallery-grid" id="gallery">
+        <!-- Add images named photo1.jpg .. photo6.jpg to the same folder to populate the gallery -->
+        <div class="thumb" data-src="photo1.jpg"><img src="photo1.jpg" alt="Foto 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo1.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo2.jpg"><img src="photo2.jpg" alt="Foto 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo2.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo3.jpg"><img src="photo3.jpg" alt="Foto 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo3.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo4.jpg"><img src="photo4.jpg" alt="Foto 4" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo4.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo5.jpg"><img src="photo5.jpg" alt="Foto 5" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo5.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo6.jpg"><img src="photo6.jpg" alt="Foto 6" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo6.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo7.jpg"><img src="photo7.jpg" alt="Foto 7" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo6.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo8.jpg"><img src="photo8.jpg" alt="Foto 8" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo6.jpg</text></svg>'"></div>
+        <div class="thumb" data-src="photo9.jpg"><img src="photo9.jpg" alt="Foto 9" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe7dd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%238b6b4a\'>Dodajte photo6.jpg</text></svg>'"></div>
+      </div>
+    </section>
+
+    <section class="card center">
+      <p style="max-width:720px;margin:0 0 8px 0;text-align:center;color:var(--muted)"><!--Ako želite da porodica i prijatelji podele sećanja, možete im proslediti ovu stranicu ili kopirati link. Za jednostavno dodavanje fotografija, zamenite placeholder fajlove u folderu sajta (photo1.jpg, photo2.jpg ...).--></p>
+      <footer>© Sećanje na Svetozara „Bracu" Pavlovića</footer>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lb-close" onclick="closeLB()">Zatvori</button>
+      <img id="lb-img" src="" alt=""/>
+    </div>
+
+  </main>
+
+  <script>
+    // Simple lightbox
+    document.querySelectorAll('.thumb').forEach(t=>{
+      t.addEventListener('click',()=>{
+        const src = t.getAttribute('data-src');
+        openLB(src, t.querySelector('img').alt || '')
+      })
+    })
+    function openLB(src, alt){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lb-img');
+      img.src = src; img.alt=alt;
+      lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    }
+    function closeLB(){
+      const lb = document.getElementById('lightbox'); lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+      document.getElementById('lb-img').src='';
+    }
+    document.getElementById('lightbox').addEventListener('click', (e)=>{ if(e.target.id==='lightbox') closeLB() })
+
+    // Accessibility: close with Esc
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB() })
+  </script>
+
+  <!--
+    HOW TO USE:
+    1) Save this file as index.html.
+    2) Place portrait.jpg and photo1.jpg .. photo6.jpg in the same folder as index.html to populate images.
+    3) Upload the folder to any static host (Netlify, Vercel, GitHub Pages) or open locally in browser.
+    4) To change text, edit the paragraphs above. All content is plain HTML/CSS and easy to customize.
+
+    If you want a dark theme, guestbook, or downloadable PDF memorial, tell me and I will add it.
+  -->
+</body>
+</html>
